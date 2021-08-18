@@ -17,23 +17,40 @@
 // Line 2
 
 // callback function
-console.log("Line 4");
+// console.log("Line 4");
 
-const getData2 = (line6) => {
-  setTimeout(() => {
-    console.log("Line 5");
-    line6();
-  }, 3000);
-};
+// const getData2 = (line6) => {
+//   setTimeout(() => {
+//     console.log("Line 5");
+//     line6();
+//   }, 3000);
+// };
 
 
-const line6 = () => {        // line 6 call back function
-  console.log("Line 6");
-};
+// const line6 = () => {        // line 6 call back function
+//   console.log("Line 6");
+// };
 
-getData2(line6); // function works as parameter
+// getData2(line6); // function works as parameter
 
 //output  //maintain the serial
 // Line 4
 // Line 5
 // Line 6
+
+//another example
+
+// const student = getStudent(1);
+// console.log(student);
+
+const getStudent = (id, cb)=>{
+  setTimeout(()=>{
+    console.log("fetching data");
+    cb({id:id, name:"sumon"})
+  },3000)
+}
+
+const student = getStudent(1,(student)=>{
+console.log(student);
+});
+console.log("a",student);
