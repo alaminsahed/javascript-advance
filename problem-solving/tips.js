@@ -97,8 +97,96 @@ console.log(compare(arr1,arr2)); //false
 //     }
 //   }
 
-// shuffling array
-
+// shorting array
+// shuffle.sort() not working properly
+// return negative value descending order
+// positive value ascending order 
 const shuffle = [25,100,50,40,10];
 
-const result =
+const result = shuffle.sort((a,b)=>{
+    return a-b;
+})
+
+console.log(result);
+
+// shuffling array
+// math.random returns value between 0 to 1 (1 excluded)
+// -0.5 helps to return positive and negative number
+
+const result2 = shuffle.sort(()=>Math.random()-0.5);
+
+console.log(result2);
+
+//remove falsy value
+// 6 falsy value in js
+// null, blank, false, undefine, not a number, NaN, 0
+
+const removeValue = ['a', null, '', false, 'd','s'];
+
+const falsyValueResult = removeValue.filter(Boolean);
+
+console.log(falsyValueResult); //[ 'a', 'd', 's' ]
+
+// convert to boolean
+// add !! before value
+
+console.log(!!'sumon'); // true
+console.log(!!0); // false
+
+//Resizing array
+//just declare new array length
+const array4 = ['sumon', 'rahim','2','5','null'];
+
+array4.length = 4;
+
+console.log(array4); //[ 'sumon', 'rahim', '2', '5' ]
+
+//How to flat multi-dimensional array
+
+const arr3 = ['2',['3','4'],'5'];
+
+const flat = arr3.flat();
+
+console.log(flat); //[ '2', '3', '4', '5' ]
+
+const arr4 = ['2',['3','4',['6','8']],'5','6'];
+
+const flat2 = arr4.flat(Infinity);
+
+console.log(flat2); //[
+//     '2', '3', '4',
+//     '6', '8', '5',
+//     '6'
+//   ]
+
+//replace string or word
+// g for all
+
+const quote = "I am a good programmer. I am also good developer. I also know good networking"
+
+const replace = quote.replace(/good/g,"bad");
+
+console.log(replace);
+
+// console.log
+
+const ele1 = 'normy';
+const ele2 =  'liberal';
+
+console.log({ele1});
+
+//measure performance 
+const {
+    performance
+  } = require('perf_hooks');
+
+const start = performance.now();
+
+for (let i = 0; i < 20; i++) {
+    console.log(i);
+    
+}
+
+const end = performance.now();
+
+console.log(`Duration: ${end-start}`);
