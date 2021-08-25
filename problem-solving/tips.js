@@ -166,14 +166,14 @@ const quote = "I am a good programmer. I am also good developer. I also know goo
 
 const replace = quote.replace(/good/g,"bad");
 
-console.log(replace);
+console.log(replace); //I am a bad programmer. I am also bad developer. I also know bad networking
 
 // console.log
 
 const ele1 = 'normy';
 const ele2 =  'liberal';
 
-console.log({ele1});
+console.log({ele1}); //{ ele1: 'normy' }
 
 //measure performance 
 const {
@@ -189,4 +189,4 @@ for (let i = 0; i < 20; i++) {
 
 const end = performance.now();
 
-console.log(`Duration: ${end-start}`);
+console.log(`Duration: ${end-start}`); //Duration: 19.46349999308586
