@@ -1,0 +1,15 @@
+//git command
+
+git status - show the changes
+
+git rm --cached filename - remove from git but available in local
+
+git branch name - new branch
+
+git checkout branchname - branch changes
+
+git merge branchname - merge
+
+git pull - from git to local host. (if anyone change the branch & want to update local branch)
+
+pull request - development branch create pull req to main branch. main branch merge the development branch;

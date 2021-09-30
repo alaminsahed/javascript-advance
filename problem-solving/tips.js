@@ -8,7 +8,7 @@ let array = [1,2,3,4,5];
 
 [array[0],array[3]] = [array[3],array[0]];
 
-console.log(array);
+console.log(array); //[ 4, 2, 3, 1, 5 ]
 
 //math solution
 
